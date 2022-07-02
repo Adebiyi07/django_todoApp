@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<style>
+       body{
+		background-color: #638CB8;
+	}
+    h3{
+        text-align: center;
+    }
+	input{
+		padding: 12px 20px;
+		margin: 8px 0;
+		box-sizing: border-box;
+	}
+    
+</style>
+<p>Are you sure you want to delete "{{item}}"?</p>
+
+<a class="btn btn-info" href="{% url 'lists' %}" >Cancel</a>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    <input type="submit" value="Confirm">
+</form>
